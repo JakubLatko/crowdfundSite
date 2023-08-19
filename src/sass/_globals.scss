@@ -1,0 +1,12 @@
+@use 'components';
+@use 'utility';
+@use 'globals';
+@use 'variables';
+
+body{
+    font-family: 'Commissioner', sans-serif;
+}
+
+.modal{
+    display: none;
+}
