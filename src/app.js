@@ -13,3 +13,4 @@ hamBtn.addEventListener("click", ()=>{
         hamIcon.src = "assets/images/icon-hamburger.svg"
     }
 })
+
