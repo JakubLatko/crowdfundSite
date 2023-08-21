@@ -4,6 +4,7 @@
 @use 'variables' as *;
 
 header{
+    position: relative;
     background-image: 
     linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, transparent 50%),
     url(../assets/images/image-hero-mobile.jpg);
@@ -15,9 +16,49 @@ header{
 
 .mainNav{
     padding-block: 2rem 15rem;
-    //background-image: linear-gradient(to bottom, rgba(0,0,0, .3) 0%, transparent 30%);
 }
 
 .navList{
-    display: none;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: $neutral-900;
+    height: fit-content;
+    left: 5vw;
+    right: 5vw;
+    top: 10vh;
+    list-style: none;
+    margin-block:0;
+    padding-inline-start: 0;
+    z-index: 100;
+    border: 1px solid $neutral-700;
+    box-shadow: 0px 0px 100px 100px rgba(0,0,0, 0.3);
+    transition: 500ms ease-in;
+    transform: none;
+}
+
+.listItem{
+    padding:1rem ;
+    border-bottom: 1px solid $neutral-700;
+    a{
+        text-decoration: none;
+        color: $neutral-100;
+        font-weight: 700;
+        
+        
+    }
+    &:last-of-type{
+        border: none;
+    }
+}
+
+.bodyShadow{
+    background-image: linear-gradient(to bottom, rgba(0,0,0, 0.6) 0%, transparent 50vh);
+    z-index: 50;
+}
+
+.navHidden{
+    transform: translateY(-50vh);
+    transition: 500ms ease-in;
 }
