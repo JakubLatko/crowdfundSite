@@ -1,4 +1,11 @@
-@use 'components';
-@use 'utility';
-@use 'globals';
-@use 'variables';
+
+//@use 'utility';
+//@use 'globals';
+@use 'variables' as *;
+
+.section{
+    padding:1rem;
+    gap: 1rem;
+    border-radius: 5px;
+    border: 1px solid $neutral-700;
+}

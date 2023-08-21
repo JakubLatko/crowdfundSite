@@ -1,12 +1,20 @@
-@use 'components';
-@use 'utility';
-@use 'globals';
-@use 'variables';
+// @use 'components';
+// @use 'utility';
+@use 'variables' as *;
 
 body{
     font-family: 'Commissioner', sans-serif;
+    background-color: $neutral-800;
 }
 
+nav, main{
+    margin-inline: 5vw;
+}
+
+main{
+    background-color: $neutral-900;
+}
 .modal{
     display: none;
 }
+

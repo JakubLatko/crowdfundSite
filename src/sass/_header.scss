@@ -1,4 +1,23 @@
-@use 'components';
-@use 'utility';
-@use 'globals';
-@use 'variables';
+// @use 'components';
+// @use 'utility';
+// @use 'globals';
+@use 'variables' as *;
+
+header{
+    background-image: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, transparent 50%),
+    url(../assets/images/image-hero-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.mainNav{
+    padding-block: 2rem 15rem;
+    //background-image: linear-gradient(to bottom, rgba(0,0,0, .3) 0%, transparent 30%);
+}
+
+.navList{
+    display: none;
+}

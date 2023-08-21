@@ -1,8 +1,9 @@
 @use 'components';
 @use 'utility';
 @use 'globals';
-@use 'variables';
+@use 'variables' as *;
 @use 'header';
 @use 'main';
 @use 'footer';
 @use 'reset';
+ 

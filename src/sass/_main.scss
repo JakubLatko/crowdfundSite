@@ -1,4 +1,116 @@
-@use 'components';
-@use 'utility';
-@use 'globals';
-@use 'variables';
+// @use 'components';
+// @use 'utility';
+// @use 'globals';
+@use 'variables' as *;
+
+main{
+    transform: translateY(-3rem);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.introSection{
+    h1{
+        font-weight: 700;
+        color: $neutral-100;
+    }
+    p{
+        font-weight: 400;
+        color: $neutral-300;
+    }
+}
+
+.introButtons{
+    align-items: center;
+    button{
+        border: none;
+        height: fit-content;
+        font-size: clamp(.75rem, 4vw, 1.5rem);
+        margin-inline: auto;
+    }
+    .backingButton{
+        background-color: $neutral-400;
+        color: $neutral-900;
+        padding: 1em 3em;
+        font-weight: 500;
+    }
+    .bookmarkingButton{
+        border-radius: 50%;
+        aspect-ratio: 1;
+        width: fit-content;
+        background-color: transparent;
+        padding: .5em 0em;
+        img{
+            object-fit: contain;
+        }
+        p{
+            display: none;
+        }
+    }
+}
+
+
+////////////////////////////////////////////////////////
+
+
+
+
+.numbers{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.numberSlot{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    h2{
+        font-weight: 700;
+        font-size: clamp(1rem, 10vw, 3rem);
+    }
+    p{
+        font-weight: 400;
+        color: $neutral-300;
+        font-size: clamp(.75rem, 4vw, 1.5rem);
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        height: 1.5px;
+        background-color: rgba($neutral-300, 0.3);
+        left: 40%;
+        right: 40%;
+        bottom: -30% ;
+    }
+    &:last-of-type{
+        &::after{
+            display: none;
+        }
+    }
+}
+
+.progressBar{
+    width: 100%;
+    height: 1rem;
+    background-color: rgba($neutral-300, 0.3);
+    position: relative;
+    --length:89.914%;
+    &::before{
+        
+        content: '';
+        background-color:$neutral-400 ;
+        position: absolute;
+        width:var(--length);
+        height: 100%;
+        border-radius: 100vw;
+    }
+}
+
+//////////////////////////////////////////////////
+
+
