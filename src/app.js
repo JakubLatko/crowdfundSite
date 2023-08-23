@@ -14,3 +14,20 @@ hamBtn.addEventListener("click", ()=>{
     }
 })
 
+
+
+const mainModal = document.querySelector(".mainModal")
+const mainModalListeners = document.querySelectorAll(".mainModalListener")
+
+mainModalListeners.forEach(element => {
+    element.addEventListener("click", ()=>{
+        console.log("dupa")
+        if(mainModal.ariaExpanded == "false"){
+            mainModal.classList.remove("modalHidden")
+            mainModal.setAttribute("aria-expanded", "true")
+        }else if(mainModal.ariaExpanded == "true"){
+            mainModal.classList.add("modalHidden")
+            mainModal.setAttribute("aria-expanded", "false")
+        }
+    })
+})

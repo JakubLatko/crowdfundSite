@@ -48,6 +48,7 @@ main{
         color: $neutral-900;
         padding: 1em 3em;
         font-weight: 500;
+        text-decoration: none;
     }
     .bookmarkingButton{
         border-radius: 50%;
@@ -189,7 +190,7 @@ main{
             font-weight: 400;
         } 
     }
-    button{
+    a{
         border-radius: 100vw;
         color: $neutral-900;
         border: none;
@@ -198,6 +199,7 @@ main{
         padding: .75em 2em;
         background-color: $neutral-400;
         font-size: clamp(.75rem, 4vw, 1.75rem);
+        text-decoration: none;
         &[disabled]{
             background-color: $neutral-300;
         }

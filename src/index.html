@@ -12,7 +12,7 @@
   <script src="app.js" defer></script>
 </head>
 <body >
-  <header>
+  <header id="header">
     <nav class="mainNav | flex-row flex-between">
       <a href="#">
         <img src="assets/images/logo.svg" alt="" class="mainLogo">
@@ -35,7 +35,7 @@
         <h1 class="text-center">Mastercraft Bamboo Monitor Riser</h1>
         <p class="text-center">A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
         <div class="introButtons | flex-row flex-between">
-          <button class="backingButton | pill-border">Back this project</button>
+          <a href="#header" class="backingButton | pill-border mainModalListener">Back this project</a>
           <button class="bookmarkingButton">
             <img src="assets/images/icon-bookmark.svg" alt="">
             <p>Bookmark</p>
@@ -81,7 +81,7 @@
             you’ll be added to a special Backer member list.</p>
             <div class="optionFooter">
               <h2>101<span>left</span></h2>
-              <button>Select Reward</button>
+              <a href="#header" class="mainModalListener">Select Reward</a>
             </div>
           </div>
           <div class="formOption | option">
@@ -93,7 +93,7 @@
             member list. Shipping is included.</p>
             <div class="optionFooter ">
               <h2>64<span>left</span></h2>
-              <button>Select Reward</button>
+              <a href="#header" class="mainModalListener">Select Reward</a>
             </div>
           </div>
           <div class="formOption | option disabledOption" >
@@ -112,18 +112,21 @@
       </section>
     </div>
   </main>
-    <!-- Selection modal start -->
-    <form action="" class="mainModal">
+
+
+
+
+    <form action="" class="mainModal | modalHidden" aria-expanded="false">
       <div class="modalOverview">
         <h2>Back this project</h2>
-        <p>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
-        <button>
+        <p class="clr-body-text">Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
+        <button class="mainMenuClose | btnClear">
           <img src="assets/images/icon-close-modal.svg" alt="">
         </button>
       </div>
       <div class="modalOption | option">
         <div class="modalOption__header">
-          <input type="radio" name="" id="">
+          <input type="radio" name="form" id="noReward">
           <div class="optionHeader">
             <h3>Pledge with no reward</h3>
           </div>
@@ -131,10 +134,8 @@
         you will be signed up to receive product updates via email.</p>
         </div>
         <div class="modalOption__footer">
-          <p class="clr-body-text"></p>
           <div class="pledgeWrapper">
-            <input type="number" name="" id="">
-            <button type="submit"></button>
+            <button type="submit" class="standaloneButton">Continue</button>
           </div>
         </div>
       </div>
@@ -142,7 +143,7 @@
 
       <div class="modalOption | option">
         <div class="modalOption__header">
-          <input type="radio" name="" id="">
+          <input type="radio" name="form" id="25dollar">
           <div class="optionHeader">
             <h3>Bamboo Stand</h3>
             <p>Pledge $25 or more</p>
@@ -156,7 +157,7 @@
         <div class="modalOption__footer">
           <p class="clr-body-text">Enter your pledge</p>
           <div class="pledgeWrapper">
-            <input type="number" name="" id="" placeholder="$25">
+            <input type="number" name="" id="" placeholder="$25" min="25">
             <button type="submit">Continue</button>
           </div>
         </div>
@@ -165,7 +166,7 @@
 
       <div class="modalOption | option">
         <div class="modalOption__header">
-          <input type="radio" name="" id="">
+          <input type="radio" name="form" id="75dollar">
           <div class="optionHeader">
             <h3>Black Edition Stand</h3>
             <p>Pledge $75 or more</p>
@@ -179,16 +180,16 @@
         <div class="modalOption__footer">
           <p class="clr-body-text">Enter your pledge</p>
           <div class="pledgeWrapper">
-            <input type="number" name="" id="" placeholder="$75">
+            <input type="number" name="" id="" placeholder="$75" min="75" >
             <button type="submit">Continue</button>
           </div>
         </div>
       </div>
 
 
-      <div class="modalOption | option">
+      <div class="modalOption | option disabledOption">
         <div class="modalOption__header">
-          <input type="radio" name="" id="">
+          <input type="radio" name="form" id="200dollar" disabled >
           <div class="optionHeader">
             <h3>Mahogany Special Edition</h3>
             <p>Pledge $200 or more</p>
@@ -203,7 +204,7 @@
           <p class="clr-body-text">Enter your pledge</p>
           <div class="pledgeWrapper">
             <input type="number" name="" id="" disabled placeholder="$200">
-            <button type="submit" disabled>Out of stock</button>
+            <button type="submit" disabled>Unavailable</button>
           </div>
         </div>
       </div>
