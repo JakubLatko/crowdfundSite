@@ -5,13 +5,18 @@
 body{
     font-family: 'Commissioner', sans-serif;
     background-color: $neutral-800;
+    scroll-behavior: smooth;
+    
 }
 
 nav, main{
     margin-inline: 5vw;
 }
-
+header, main{
+    scroll-behavior: smooth;
+}
 main{
     background-color: $neutral-900;
+    
 }
 

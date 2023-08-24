@@ -1,5 +1,35 @@
 @use 'variables' as *;
 
 .smallModal{
-    display: none;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 10vh;
+    left: 5vw;
+    right: 5vw;
+    background-color: $neutral-900;
+    box-shadow: 0px 0px 10px 10000px rgba($neutral-100, 0.3);
+    border-radius: 5px;
+    border: 1px solid #dedede;
+    padding:2rem 1rem;
+    transition: 500ms ease-in;
+    text-align: center;
+    gap: 1rem;
+    img{
+        object-fit: contain;
+    }
+    h2{
+        font-size: clamp(.75rem, 5vw, 1.75rem );
+    }
+    p{
+        font-size: clamp(.75rem, 3.75vw, 1.5rem );
+    }
+    button{
+        background-color: $neutral-400;
+        border-radius:100vw ;
+        border: none;
+        color: $neutral-900;
+        padding: .75em 2em;
+        font-size: clamp(.75rem, 3.75vw, 1.5rem );
+    }
 }

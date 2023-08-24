@@ -46,7 +46,7 @@
       <section class="statsSection | flex-col section">
         <div class="numbers">
           <div class="numberSlot">
-            <h2>$89,914</h2>
+            <h2>$89.914</h2>
             <p>of $100,000 backed</p>
           </div>
           <div class="numberSlot">
@@ -120,7 +120,7 @@
       <div class="modalOverview">
         <h2>Back this project</h2>
         <p class="clr-body-text">Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
-        <button class="mainMenuClose | btnClear">
+        <button class="mainMenuClose | btnClear mainModalListener">
           <img src="assets/images/icon-close-modal.svg" alt="">
         </button>
       </div>
@@ -211,12 +211,12 @@
     </form>
   
   
-  <div class="smallModal">
+  <div class="smallModal | flex-col modalHidden" aria-expanded="false">
     <img src="assets/images/icon-check.svg" alt="">
     <h2>Thanks for your support!</h2>
     <p class="clr-body-text">Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
     an email once our campaign is completed.</p>
-    <button>Got it!</button>
+    <button class="smallModalClose">Got it!</button>
   </div>
   
   

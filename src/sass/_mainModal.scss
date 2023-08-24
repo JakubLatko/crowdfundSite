@@ -146,7 +146,12 @@
 }
 
 .modalHidden{
-    transform: translateY(-130%);
+    transform: translateY(-150%);
     box-shadow: none;
     transition: 500ms ease-in;
+}
+
+.mainModalListener{
+    scroll-behavior: smooth;
+    transition: 500ms ease;
 }
