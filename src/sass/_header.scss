@@ -63,3 +63,40 @@ header{
     transition: 500ms ease-in;
 }
 
+@media only screen and (min-width:1440px){
+    header{
+        background-image: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, transparent 50%),
+    url(../assets/images/image-hero-desktop.jpg);
+    }
+    .mainNav{
+        padding-block: 3rem 20rem;
+    }
+    .logoLink{
+        margin-block: auto;
+    }
+    .navList{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        inset: 0;
+        box-shadow: none;
+        background-color: transparent;
+        border: 0;
+        li{
+            border: 0;
+            
+            a{
+                color:$neutral-900 ;
+                font-weight: 400;
+
+            }
+        }
+    }
+    .navHidden{
+        transform: none;
+    }
+    .hamButton{
+        display: none;
+    }
+}

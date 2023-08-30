@@ -65,6 +65,47 @@ main{
     }
 }
 
+@media only screen and (min-width:1440px){
+    main{
+        margin-inline: 25vw;
+        transform: translateY(-7rem);
+    }
+    .introSection{
+         
+        h1{
+            font-size: clamp(1.5rem, 2.25vw, 3rem);
+        }
+        p{
+            font-size: clamp(1rem, 1.25vw, 1.75rem);
+        }
+    }
+    .introButtons{
+        padding-block: 2rem;
+        height: fit-content;
+        justify-content: space-between;
+        .bookmarkingButton{
+            margin-inline: 0;
+            margin-left: auto;
+            aspect-ratio: 0;
+            padding: 0;
+            height: fit-content;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
+            border-radius: 100vw;
+            background-color: hsl(0, 0%, 87%);
+            img{
+                height:fit-content ;
+            }
+            p{
+                height:fit-content ;
+                display: block;
+                padding-inline-end:1rem;
+            }
+        }
+    }
+}
 
 
 
@@ -129,6 +170,36 @@ main{
     }
 }
 
+@media only screen and (min-width:1440px){
+    .numbers{
+        display: flex;
+        flex-direction: row;
+        padding-block: 1rem;
+        .numberSlot{
+            height: max-content;
+            flex-grow: 1;
+            
+            padding-block: .5rem;
+            text-align: left;
+            h2{
+                font-size: clamp(1rem, 2.5vw, 2rem);
+            }
+            p{
+                font-size: clamp(.75rem, 1.25vw, 1.5rem);
+            }
+            &::after{
+                height: auto;
+                width: 2px;
+                right: 0;
+                left: auto;
+                top: 0%;
+                bottom: 0%;
+            }
+        }
+    }
+}
+
+
 //////////////////////////////////////////////////
 .projectSection{
     padding: 1rem 5vw;
@@ -190,7 +261,7 @@ main{
             font-weight: 400;
         } 
     }
-    a{
+    a, button{
         border-radius: 100vw;
         color: $neutral-900;
         border: none;
@@ -206,7 +277,58 @@ main{
     }
 }
 
+@media only screen and (min-width:1440px){
+    .projectSection{
+        padding-block: 3rem;
+    }
+    .projectOverview{
 
+        h2{
+            font-size: clamp(1rem, 2vw, 2rem);
+        }
+        p{
+            font-size: clamp(.75rem, 1.125vw, 1.5rem);
+            line-height: 200%;
+        }
+    }
+
+    .formOption{
+        // display: grid;
+        // grid-template-columns: 1fr 1fr;
+        // grid-template-rows: 1fr 1fr 1fr;
+        // .
+        gap: 2rem;
+        .optionHeader{
+            display: flex;
+            flex-direction: row;
+            h3{
+                font-size: clamp(1rem, 1.5vw, 1.75rem);
+            }
+            p{
+                margin-left: auto;
+                font-size: clamp(1rem, 1.25vw, 1.75rem);
+            }
+        }
+        & > p{
+            font-size: clamp(.75rem, 1.125vw, 1.5rem);
+            
+        }
+        .optionFooter{
+            display: flex;
+            flex-direction: row;
+            h2{
+                font-size: clamp(1rem, 2.5vw, 2rem);
+                span{
+                    font-size: clamp(.75rem, 1.125vw, 1.5rem);
+                }
+            }
+            a,button{
+                margin-left: auto;
+                font-size: clamp(.75rem, 1.125vw, 1.5rem);
+            }
+        }
+    }
+}
 
 
 ///////////////////////////////////////////////////////
