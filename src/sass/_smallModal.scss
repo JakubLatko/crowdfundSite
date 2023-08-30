@@ -31,5 +31,30 @@
         color: $neutral-900;
         padding: .75em 2em;
         font-size: clamp(.75rem, 3.75vw, 1.5rem );
+        &:hover, &:focus{
+            cursor: pointer;
+            background-color: $neutral-500;
+            transition: 250ms ease;
+        }
     }
+}
+
+
+@media only screen and (min-width:1440px){
+    .smallModal{
+        //aspect-ratio: 1;
+        left: 35vw;
+        right: 35vw;
+        h2{
+            font-size: clamp(1rem, 2vw, 2rem);
+        }
+        p{
+            font-size: clamp(.75rem, 1.125vw, 1.5rem);
+            line-height: 200%;
+        }
+        button{
+            font-size: clamp(.75rem, 1.125vw, 1.5rem);
+        }
+    }
+    
 }

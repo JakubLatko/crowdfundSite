@@ -57,6 +57,11 @@
             grid-row: 1;
             h3{
                 font-size: clamp(1rem, 4vw, 1.75rem);
+                &:hover, &:focus{
+                    cursor: pointer;
+                    color: $neutral-400;
+                    transition: 250ms ease;
+                }
             }
             p{
                 font-size: clamp(.75rem, 4vw, 1.75rem);
@@ -111,6 +116,11 @@
                 border: 1px solid hsl(0, 0%, 87%);
                 width: max-content;
                 width: calc(40% - .5rem);
+                &:hover, &:focus{
+                    cursor: pointer;
+                    border-color: $neutral-500;
+                    transition: 250ms ease;
+                }
             }
             button{
                 flex-grow: 1;
@@ -120,6 +130,11 @@
                 color: $neutral-900;
                 padding: .75em 2em;
                 font-size: clamp(.75rem, 3.75vw, 1.5rem);
+                &:hover, &:focus{
+                    cursor: pointer;
+                    background-color: $neutral-500;
+                    transition: 250ms ease;
+                }
             }
         }
         &::before{
@@ -164,9 +179,9 @@
         right: 25vw;
         padding: 2rem;
     }
-    .mainModal.modalHidden{
-        transform: none;
-    }
+    // .mainModal.modalHidden{
+    //     transform: none;
+    // }
 
     .modalOverview{
         h2{
@@ -244,6 +259,7 @@
             margin: 0;
             gap: 1rem;
             justify-content: flex-end;
+            //width: 100%;
             input{
                 
                 padding: .5em .5rem;
@@ -263,5 +279,8 @@
             display: flex;
             flex-direction: row;
         }
+    }
+    .standaloneButton{
+        margin-inline: auto;
     }
 }

@@ -45,7 +45,9 @@ header{
         text-decoration: none;
         color: $neutral-100;
         font-weight: 700;
-        
+        &:hover, &:focus{
+            cursor: pointer;
+        }
         
     }
     &:last-of-type{

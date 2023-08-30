@@ -57,3 +57,20 @@ mainModal.addEventListener("submit", (e)=>{
 
 smallModalClose.addEventListener("click", smallModalSwitch)
 
+
+
+const bookmarkButton = document.querySelector(".bookmarkingButton")
+const bookmarkIcon = document.querySelector(".bookmarkIcon")
+
+let bookmarked = false
+bookmarkButton.addEventListener("click", ()=>{
+    bookmarked = !bookmarked
+    console.log(bookmarked)
+    if(bookmarked){
+        bookmarkButton.classList.add("bookmarked")
+        bookmarkIcon.src="assets/images/icon-bookmarked.svg"
+    }else{
+        bookmarkButton.classList.remove("bookmarked")
+        bookmarkIcon.src="assets/images/icon-bookmark.svg"
+    }
+})
