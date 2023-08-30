@@ -155,3 +155,113 @@
     scroll-behavior: smooth;
     transition: 500ms ease;
 }
+
+@media only screen and (min-width:1440px){
+
+    .mainModal{
+        display: flex;
+        left: 25vw;
+        right: 25vw;
+        padding: 2rem;
+    }
+    .mainModal.modalHidden{
+        transform: none;
+    }
+
+    .modalOverview{
+        h2{
+            font-size: clamp(1rem, 2vw, 2rem);
+        }
+        p{
+            font-size: clamp(.75rem, 1.125vw, 1.5rem);
+            line-height: 200%;
+        }
+    }
+    .modalOption__header{
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        grid-template-rows: auto 1fr;
+        input{
+            grid-column: 1;
+            grid-row: 1;
+        }
+        .optionHeader{
+            grid-column: 2;
+            grid-row: 1;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
+            h3{
+                font-size: clamp(1rem, 1.25vw, 1.75rem);
+            }
+            p{
+                
+                font-size: clamp(1rem, 1.125vw, 1.75rem);
+            }
+
+        }
+        & > p{
+            font-size: clamp(.75rem, 1.125vw, 1.5rem);
+            line-height: 200%;
+            grid-column: 2 / span 2;
+            grid-row: 2;
+            padding-block: 0; 
+        }
+        .optionFooter{
+            grid-column: 3;
+            grid-row: 1;
+            h2{
+                font-size: clamp(1rem, 1.5vw, 2rem);
+                span{
+                    font-size: clamp(.75rem, 1.125vw, 1.5rem);
+                }
+            }
+        }
+    }
+
+    .modalOption__footer{
+        display: none;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        padding-block-start: 1rem;
+        &::before{
+            width: calc(100% + 4rem);
+            left: -2rem;
+            //top: -1rem;
+        }
+        & > p{
+            font-size: clamp(.75rem, 1.125vw, 1.5rem);
+            line-height: 200%;
+            margin-top: 0; 
+        }
+        .pledgeWrapper{
+            width: fit-content;
+            margin-left: auto;
+            align-items: center;
+            margin: 0;
+            gap: 1rem;
+            justify-content: flex-end;
+            input{
+                
+                padding: .5em .5rem;
+                font-size: clamp(.75rem, 1.125vw, 2rem);
+            }
+            button{
+                padding:.5em 1em;
+                flex-grow: 0; 
+                font-size: clamp(.75rem, 1.125vw, 2rem);
+            }
+        }   
+    }
+    .modalOption:has(input:checked){
+        border: 1px solid $neutral-400;
+        padding:2rem 2rem 1rem 2rem;
+        .modalOption__footer{
+            display: flex;
+            flex-direction: row;
+        }
+    }
+}
