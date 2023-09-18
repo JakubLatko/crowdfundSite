@@ -81,6 +81,92 @@ main{
 
     }
 }
+@media only screen and (min-width:399px) and (max-width:767px){
+    .introSection{
+        h1{
+            font-size: clamp(1rem, 6vw, 2rem);
+            max-width: 20ch;
+            margin-inline: auto;
+        }
+        & > p{
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            max-width: 30ch;
+            margin-inline: auto;
+        }
+    }
+    
+    
+    .introButtons{
+       justify-content: center;
+       align-items: center;
+        button,a{
+            margin-inline: auto;
+        }
+    }
+
+}
+
+@media only screen and (min-width:600px) and (max-width:767px){
+    .introSection{
+        h1{
+            font-size: clamp(1rem, 6vw, 2rem);
+        }
+        & > p{
+            font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+        }
+    }
+    
+}
+
+@media only screen and (min-width:600px) and (max-width:1023px){
+    .introButtons{
+        padding-block: 2rem;
+        height: fit-content;
+        justify-content: space-around;
+        .bookmarkingButton{
+            margin-inline: 0;
+           
+            aspect-ratio: 0;
+            padding: 0;
+            height: fit-content;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
+            border-radius: 100vw;
+            background-color: hsl(0, 0%, 87%);
+            img{
+                height:fit-content ;
+            }
+            p{
+                font-weight: 700;
+                height:fit-content ;
+                display: block;
+                padding-inline-end:1rem;
+                font-size: clamp(1rem, 2vw, 1.5rem);
+            }
+        }
+        .backingButton{
+            width: fit-content;
+            margin: 0;
+        }
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:1023px){
+    .introSection{
+        h1{
+            font-size: clamp(1rem, 6vw, 2rem);
+        }
+        & > p{
+            font-size: clamp(1rem, 1.75vw, 1.5rem);
+            
+        }
+    }
+}
+
+
+
 @media only screen and (min-width:1440px){
     main{
         margin-inline: 25vw;
@@ -188,6 +274,21 @@ main{
         border-radius: 100vw;
     }
 }
+@media only screen and (min-width:399px) and (max-width:600px){
+    .numberSlot{
+        h2{
+            font-size: clamp(1rem, 8vw, 3rem);
+        }
+        p{
+            font-size: clamp(1rem, 3.5vw, 1.5rem);
+        }
+    }
+    .progressBar{
+        margin-block: 1rem;
+    }
+}
+
+
 
 @media only screen and (min-width:1440px){
     .numbers{
@@ -300,6 +401,40 @@ main{
         }
     }
 }
+@media only screen and (min-width:399px) and (max-width:600px){
+    .projectOverview{
+        h2{
+            font-size: clamp(1rem, 5vw, 2rem);
+        }
+        p{
+            font-size: clamp(1rem, 3vw, 1.5rem);
+        }
+    }
+    .optionHeader{
+        h2{
+            font-size: clamp(1rem, 5vw, 2rem);
+        }
+        p{
+            font-size: clamp(1rem, 3vw, 1.5rem);
+        }
+    }
+    .optionFooter{
+        h2{
+            font-size: clamp(1rem, 5vw, 2rem);
+            span{
+                font-size: clamp(1rem, 3vw, 1.5rem);
+            }
+        }
+        a,button{
+            font-size: clamp(1rem, 3vw, 2rem);
+        }
+    }
+    .formOption > p{
+        font-size: clamp(1rem, 3vw, 1.5rem);
+    }
+}
+
+
 
 @media only screen and (min-width:1440px){
     .projectSection{
@@ -317,10 +452,7 @@ main{
     }
 
     .formOption {
-        // display: grid;
-        // grid-template-columns: 1fr 1fr;
-        // grid-template-rows: 1fr 1fr 1fr;
-        // .
+        
         gap: 2rem;
         .optionHeader{
             display: flex;
